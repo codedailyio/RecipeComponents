@@ -16,29 +16,9 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.spacer} />
       <View style={styles.spacer} />
-      <View
-        style={[
-          styles.whiteWrap,
-          { flexDirection: "column", alignItems: "flex-start" },
-        ]}
-      >
-        <Text
-          style={{
-            marginBottom: 16,
-            fontWeight: "bold",
-            fontSize: 18,
-            color: "#111127",
-          }}
-        >
-          Difficulty
-        </Text>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
+      <View style={styles.whiteWrap}>
+        <Text style={styles.title}>Difficulty</Text>
+        <View style={styles.badgeRow}>
           <Badge>Easy</Badge>
           <View style={{ paddingHorizontal: 10 }}>
             <Badge selected>Medium</Badge>
@@ -70,9 +50,20 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     paddingHorizontal: 20,
     paddingVertical: 25,
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+  },
+  title: {
+    marginBottom: 16,
+    fontWeight: "bold",
+    fontSize: 18,
+    color: "#111127",
+  },
+  badgeRow: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
+    width: "100%",
   },
   badge: {
     backgroundColor: "#FAF2F0",
