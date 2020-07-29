@@ -1,30 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { Calories, Serving, Clock } from "./icons";
-
-const Piece = ({ icon, children }) => {
-  return (
-    <View
-      style={{
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        marginRight: 10,
-      }}
-    >
-      {icon}
-      <Text
-        style={{
-          marginLeft: 10,
-          fontWeight: "bold",
-          fontSize: 12,
-        }}
-      >
-        {children}
-      </Text>
-    </View>
-  );
-};
 
 const Badge = ({ children, selected }) => {
   return (
@@ -40,19 +15,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.spacer} />
-      <View style={styles.whiteWrap}>
-        <Piece icon={<Clock />}>30 min</Piece>
-        <Piece icon={<Serving />}>6 servings</Piece>
-        <Piece icon={<Calories />}>210 calories</Piece>
-      </View>
-
       <View style={styles.spacer} />
-    </View>
-  );
-}
-
-{
-  /* <View style={styles.spacer} />
       <View
         style={[
           styles.whiteWrap,
@@ -82,7 +45,10 @@ export default function App() {
           </View>
           <Badge>Hard</Badge>
         </View>
-      </View> */
+      </View>
+      <View style={styles.spacer} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
