@@ -45,14 +45,7 @@ export default function App() {
         <Piece icon={<Serving />}>6 servings</Piece>
         <Piece icon={<Calories />}>210 calories</Piece>
       </View>
-
       <View style={styles.spacer} />
-    </View>
-  );
-}
-
-{
-  /* <View style={styles.spacer} />
       <View
         style={[
           styles.whiteWrap,
@@ -82,7 +75,10 @@ export default function App() {
           </View>
           <Badge>Hard</Badge>
         </View>
-      </View> */
+      </View>
+      <View style={styles.spacer} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
