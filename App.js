@@ -15,7 +15,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.spacer} />
-      <View style={styles.spacer} />
       <View style={styles.whiteWrap}>
         <Text style={styles.title}>Difficulty</Text>
         <View style={styles.badgeRow}>
